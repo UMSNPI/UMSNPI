@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+    <body>
+        
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="logo">
+                        <a><img src="~/Images/logo.jpg" /></a>
+                        @*<img src="~/Images/logo.png" />*@
+                    </div>
+                    @*@Html.ActionLink("Application name", "Index", "Home", null, new { @class = "navbar-brand" })*@
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="jumbotron">
+            <section class="slider-section">
+                <div id="carousel-slider-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-slider-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-slider-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-slider-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-slider-generic" data-slide-to="3"></li>
+
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner text-white" role="listbox">
+                        <div class="item active">
+                            <img src="~/Images/1.jpg" alt="Slider image" />
+                        </div>
+                        <div class="item">
+                            <img src="~/Images/2.jpg" alt="Slider image" />
+                        </div>
+                        <div class="item">
+                            <img src="~/Images/3.jpg" alt="Slider image" />
+                        </div>
+                        <div class="item">
+                            <img src="~/Images/4.jpg" alt="Slider image" />
+                        </div>
+                        @*<div class="item">
+                            <img src="~/Images/bigstock.jpg" alt="Slider image" />
+                        </div>
+                        <div class="item">
+                            <img src="~/Images/canstockphoto.jpg" alt="Slider image" />
+                        </div>
+                        <div class="item">
+                            <img src="~/Images/canstockphoto02.jpg" alt="Slider image" />
+                        </div>*@
+                        <div class="item">
+                            <img src="~/Images/education-500_06.jpg" alt="Slider image" />
+                        </div>
+                        <div class="item">
+                            <img src="~/Images/canstockphoto00.jpg" alt="Slider image" />
+                        </div>
+                    </div>
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-slider-generic" role="button" data-slide="prev">
+                        <span class="fa fa-chevron-left" aria-hidden="true"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-slider-generic" role="button" data-slide="next">
+                        <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </section> <!-- End of slider section -->
+            <marquee align="top" onmouseout="this.start();" onmouseover="this.stop();" scrollamount="1" scrolldelay="10" behavior="scroll" direction="left" truespeed="truespeed" style="">
+                <a href="" class="prosp-pl-affrep0"><i class="icon-stop"><h1>This is a complite University management system</h1></i> </a>
+
+            </marquee>
+            <img src="~/Images/freedom-air.jpg" />
+        </div>
+        
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>
